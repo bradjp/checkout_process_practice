@@ -7,14 +7,10 @@ class Shop
     return -1 if items.match(/([^A-D])/)
     return -1 if items.empty?
 
-    items = items.split('')
-
     a = items.count('A')
     b = items.count('B')
     c = items.count('C')
     d = items.count('D')
-
-    total = 0
 
     a_discount = a / 3
     b_discount = b / 2
