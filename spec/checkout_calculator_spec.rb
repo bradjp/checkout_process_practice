@@ -30,4 +30,15 @@ describe '#checkout' do
       expect(@shop.checkout('ABCD')).to eq(115)
     end
   end
+  context 'valid inputs with discounts' do
+    it 'returns 130 when passed AAA' do
+      expect(@shop.checkout('AAA')).to eq(130)
+    end
+    it 'returns 260 when passed AAAAAA' do
+      expect(@shop.checkout('AAAAAA')).to eq(260)
+    end
+    it 'returns 90 when passed BBBD' do
+      expect(@shop.checkout('BBBD')).to eq(90)
+    end
+  end
 end
