@@ -22,4 +22,9 @@ describe '#checkout' do
       expect(@shop.checkout(18)).to eq(-1)
     end
   end
+  context 'valid inputs' do
+    it 'returns 100 when passed AA' do
+      expect(@shop.checkout('AA')).to eq(100)
+    end
+  end
 end
