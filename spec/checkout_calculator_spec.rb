@@ -26,5 +26,8 @@ describe '#checkout' do
     it 'returns 100 when passed AA' do
       expect(@shop.checkout('AA')).to eq(100)
     end
+    it 'returns 115 when passed ABCD' do
+      expect(@shop.checkout('ABCD')).to eq(115)
+    end
   end
 end
